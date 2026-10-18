@@ -9,7 +9,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Homelab | Jack Hessefort">
   <meta property="og:description" content="Homelab writeups: Active Directory enterprise lab, Wazuh SIEM detection rules, and Kali Linux attack simulations.">
-  <meta property="og:image" content="https://meet246.github.io/assets/og.png">
+  <meta property="og:image" content="https://jack-hessefort.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css?v=11">
 </head>
@@ -51,7 +51,7 @@
     <p>Fires on Sysmon process creation where Word, Excel or Outlook is the parent and PowerShell or cmd is the child, the classic malicious-macro pattern. I tested it without an Office license by renaming <code>cmd.exe</code> to <code>winword.exe</code>, since Sysmon tracks the path of the running image.</p>
     <figure><img src="assets/img/rule_2_confirm.png" alt="Wazuh Threat Hunting showing rule 100002 firing once at level 12 on CLIENT01" loading="lazy"><figcaption>Rule 100002 firing when the renamed winword.exe spawned PowerShell.</figcaption></figure>
 
-    <p><a href="https://github.com/meet246/SOC-Detection-Lab">Full writeup and screenshots on GitHub &rarr;</a></p>
+    <p><a href="https://github.com/Jack-Hessefort/SOC-Detection-Lab">Full writeup and screenshots on GitHub &rarr;</a></p>
 
     <h2 id="ad-lab">Enterprise Active Directory Lab (VMware)</h2>
     <p class="meta"><span class="tag">Windows Server 2022</span><span class="tag">PowerShell</span><span class="tag">Group Policy</span><span class="tag">VMware</span></p>
@@ -59,14 +59,14 @@
     <figure class="narrow"><img src="assets/img/ou-ps.png" alt="PowerShell ISE output creating HR and ITSupport OUs, security groups, and provisioning users" loading="lazy"><figcaption>Provisioning script creating OUs, groups and users.</figcaption></figure>
     <figure class="narrow"><img src="assets/img/AD-Users.png" alt="Active Directory Users and Computers showing the corp.local OU structure" loading="lazy"><figcaption>The resulting OU structure in Active Directory Users and Computers.</figcaption></figure>
     <p><strong>Why it matters:</strong> I hardened it with Group Policy: LLMNR and NetBIOS disabled, firewall logging, and advanced audit policies for Kerberos, logon and process creation. That gives a SIEM the telemetry a SOC analyst depends on.</p>
-    <p><a href="https://github.com/meet246/Active-Directory-Enterprise-Lab">Full writeup on GitHub &rarr;</a></p>
+    <p><a href="https://github.com/Jack-Hessefort/Active-Directory-Enterprise-Lab">Full writeup on GitHub &rarr;</a></p>
 
     <h2>More projects</h2>
     <ul class="links">
-      <li><a href="https://github.com/meet246/soc-analysis-psexec-pivot">PsExec lateral movement alert analysis</a>: alert triage and mitigation write-up from the ReliaQuest SOC simulation.</li>
-      <li><a href="https://github.com/meet246/SOC-Investigation-HTTP-Beaconing-Reverse-Shell-Activity-Analysis">HTTP beaconing and reverse shell PCAP investigation</a>: network forensics on suspicious internal-host traffic.</li>
-      <li><a href="https://github.com/meet246/Cybersecurity-CTF-Labs">Hack The Box penetration testing labs</a></li>
-      <li><a href="https://github.com/meet246/home-network-security">Home network security assessment</a></li>
+      <li><a href="https://github.com/Jack-Hessefort/soc-analysis-psexec-pivot">PsExec lateral movement alert analysis</a>: alert triage and mitigation write-up from the ReliaQuest SOC simulation.</li>
+      <li><a href="https://github.com/Jack-Hessefort/SOC-Investigation-HTTP-Beaconing-Reverse-Shell-Activity-Analysis">HTTP beaconing and reverse shell PCAP investigation</a>: network forensics on suspicious internal-host traffic.</li>
+      <li><a href="https://github.com/Jack-Hessefort/Cybersecurity-CTF-Labs">Hack The Box penetration testing labs</a></li>
+      <li><a href="https://github.com/Jack-Hessefort/home-network-security">Home network security assessment</a></li>
     </ul>
   </main>
 
